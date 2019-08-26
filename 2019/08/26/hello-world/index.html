@@ -823,12 +823,16 @@
             
             
             <br>
-             <span
-                id="busuanzi_container_site_pv" style='display:none'> <i class="fa fa-heart-o"></i> 本站总访问量 <span
-                    id="busuanzi_value_site_pv" class="white-color"></span> </span> 
-             <span
-                id="busuanzi_container_site_uv" style='display:none'> 人次,&nbsp;访客数 <span id="busuanzi_value_site_uv"
-                    class="white-color"></span> 人. </span> 
+            
+                <span id="busuanzi_container_site_pv" style='display:none'>
+                    <i class="fa fa-heart-o"></i> 本站总访问量
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+            
+            
+                <span id="busuanzi_container_site_uv" style='display:none'> 人次,&nbsp;访客数 
+                    <span id="busuanzi_value_site_uv" class="white-color"></span> 人. </span> 
+            
             
         </div>
 
@@ -871,7 +875,7 @@
         var todayMinute = today.getMinutes();
         var todaySecond = today
             .getSeconds(); /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳) year - 作为date对象的年份，为4位年份值 month - 0-11之间的整数，做为date对象的月份 day - 1-31之间的整数，做为date对象的天数 hours - 0(午夜24点)-23之间的整数，做为date对象的小时数 minutes - 0-59之间的整数，做为date对象的分钟数 seconds - 0-59之间的整数，做为date对象的秒数 microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-        var t1 = Date.UTC(2018, 09, 11, 00, 00,
+        var t1 = Date.UTC(2019, 08, 26, 00, 00,
             00); //北京时间2018-2-13 00:00:00 
         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
         var diff = t2 - t1;
@@ -890,8 +894,8 @@
     $(document).ready(function () {
         var int = setInterval(fixCount,
             50); // 50ms周期检测函数 
-        var pvcountOffset = 80000; // 初始化首次数据 
-        var uvcountOffset = 20000;
+        var pvcountOffset = 0; // 初始化首次数据 
+        var uvcountOffset = 0;
 
         function fixCount() {
             if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
@@ -951,5 +955,5 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"display":{"position":"left","height":400,"mobile":{"show":true,"react":{"opacity":0.7}}},"jsonPath":"/live2dw/assets/shizuku.model.json"}});</script></body>
+</body>
 </html>
